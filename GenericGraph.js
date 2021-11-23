@@ -27,8 +27,10 @@ const GenericGraph = (props) => {
 		if (value < 50 )
 			return '#AF5555';
 		else if (value < 100 )
+			return '#AFAF55';
+		else if (value >= 100 && value <=200 )
 			return '#55AF55';
-		else if (value > 100 )
+		else if (value > 200 )
 			return '#5555AF';
 	});
 	var screenWidth=Dimensions.get('window').width - 10
@@ -59,7 +61,7 @@ const webChartConfig = {
       <Text style={{ fontSize: 28, textAlign: 'center' }}>  {type} </Text>
       <BarChart
         data={totaldata}
-        width={Dimensions.get('window').width - 20}
+        width={Dimensions.get('window').width - 2}
         height={100}
        chartConfig={ webChartConfig }
 	withCustomBarColorFromData={customColors} 
